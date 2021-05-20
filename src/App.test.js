@@ -1,10 +1,10 @@
-import App from './App';
 import { shallow } from 'enzyme';
+import Counter from './Counter';
 
 describe('Counter Test', () => {
   let wrapper;
   beforeEach(()=>{
-    wrapper = shallow(<App />);
+    wrapper = shallow(<Counter />);
   });
   test('should render counter app welcome message', () => {
     expect(wrapper.find('h1').text()).toContain('Welcome to counter app');
