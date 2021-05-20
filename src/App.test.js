@@ -26,5 +26,8 @@ describe('Counter Test', () => {
     wrapper.find('#increment-btn').simulate('click');
     expect(wrapper.find('#counter-value').text()).toBe("1");
   });
-  
+
+  test('should render a button with text `Decrement`', () => {
+    expect(wrapper.find('#decrement-btn').text()).toBe('Decrement');
+  });
 });
