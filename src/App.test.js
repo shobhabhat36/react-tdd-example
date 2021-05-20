@@ -30,4 +30,11 @@ describe('Counter Test', () => {
   test('should render a button with text `Decrement`', () => {
     expect(wrapper.find('#decrement-btn').text()).toBe('Decrement');
   });
+
+  test('should render the click event of decrement button and decrement counter value', () => {
+    wrapper.find('#increment-btn').simulate('click');
+    expect(wrapper.find('#counter-value').text()).toBe("1");
+    wrapper.find('#decrement-btn').simulate('click');
+    expect(wrapper.find('#counter-value').text()).toBe("0");
+  });
 });
