@@ -1,10 +1,10 @@
-import { shallow } from 'enzyme';
-import Counter from './Counter';
+import { mount } from 'enzyme';
+import App from './App';
 
 describe('Counter Test', () => {
   let wrapper;
   beforeEach(()=>{
-    wrapper = shallow(<Counter />);
+    wrapper = mount(<App />);
   });
   test('should render counter app welcome message', () => {
     expect(wrapper.find('h1').text()).toContain('Welcome to counter app');
